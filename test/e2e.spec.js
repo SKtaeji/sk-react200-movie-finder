@@ -24,10 +24,10 @@ describe('express', () => {
   it('should have the correct page title', () =>
     nightmare
       .goto(url)
-      .evaluate(() => document.querySelector('body').innerText)
+      .evaluate(() => document.querySelector('title').innerText)
       .end()
       .then((text) => {
-        expect(text).to.equal('Hello World');
+        expect(text).to.equal('Movie Finder');
       })
   );
 

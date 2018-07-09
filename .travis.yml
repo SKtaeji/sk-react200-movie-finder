@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - '9'
+dist: trusty
+env:
+  - NODE_ENV=development
+cache:
+  directories:
+    - node_modules
+install:
+  - npm install
+script:
+  - npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: J9WFaWB3GjuOAMNKZL16Gw/arktv2o9Ph1nOrHiDV5vQ8h/V4I5qi3T7ThE7YqwtS+rp5ng/wQ5HZIc/H3yxXsCR5YUm5P75CAiJnZWb3vssMnrflsfUWqsnpJMYujruBMPHldvauFRWpUBS3IkkGn5iMn5p/9ITKZG69m4An06B6ZYkt0NjkEFK2vviObzJUmN7ejOLeLGe8zM3g8oZaeqj4fsZHquFxwhDe1/OoaOX/0qqed9tVDw8b5nF8/HT9Vr0WIoOobVn8E2gvolsmNKulEyBcRnTAsiw3bY5TssH0Td+fP6EYQEfoD64NgbgrKenOWi6HYBuEHYsY9oMdlYEb+h0ufuu4/x4yzhyLJDHJlEpW/sD7C+RJahhU6rAp6ry5EIRg/QnCdgCNa6VmQRemNljTlQH+vzaX9M9Lyfw8bQKSpvGT4MFfPPWSb5ykKLDxVjMCQi7oal+qKyOZEjIJSi4Prcm95es2f+HnlgbMhnRM18HvDNu+7MDhCP4ogqh02eY8H3NJ6G97JrQKGzl7JRLOXaonrL/UacWMvRpgtLDp4O7iQlO62yQsGOlNOY7DGiS2D8veUND18pTPPWI1OS71qbgAEoA5DFU3Aq2XTqz9KLVfYJO8Zp8MjFPYvj4gB7nVEmg/mkDkx1HcbQzVKDX4iJoRlajgcURI9w=
+  app: sk-react-redux-movie-finder
+  on:
+    repo: SKtaeji/sk-react200-movie-finder

@@ -21,7 +21,6 @@ export function getMovie(query, dispatch) {
 }
 
 export function returnMoviesFromSearch(movies) {
-    console.log('ACTION DISPATCHED');
     return {
         type: "RETURN_MOVIES",
         payload: movies

@@ -6,8 +6,6 @@ const defaultState = {
 
 export default function MovieSearchReducer(state = defaultState, action) {
   const { type, payload } = action;
-  console.log('REDUCER HIT')
-  console.log('Action: ', action);
 
   switch (type) {
     case "UPDATE_SEARCH_ITEM": {
@@ -18,7 +16,6 @@ export default function MovieSearchReducer(state = defaultState, action) {
     }
 
     case "RETURN_MOVIES": {
-      console.log('Payload: ',payload)
       return {
         ...state,
         movies: payload

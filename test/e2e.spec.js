@@ -24,7 +24,7 @@ describe('express', () => {
   it('should have the correct page title', () =>
     nightmare
       .goto(url)
-      .evaluate(() => document.querySelector('title').innerText)
+      .evaluate(() => document.querySelector('h1').innerText)
       .end()
       .then((text) => {
         expect(text).to.equal('Movie Finder');

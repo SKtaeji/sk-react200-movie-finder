@@ -1,22 +1,7 @@
 const defaultState = {
   searchItem: "",
-  movieData: {
-    title: "",
-    score: "",
-    year: "",
-    poster: "",
-    plot: "",
-    release: "",
-    director: "",
-    writer: "",
-    actors: "",
-    genre: "",
-    runtime: "",
-    awards: "",
-    language: "",
-    error: false
-  },
-  movies: null
+  movies: [],
+  movie: {}
 };
 
 export default function MovieSearchReducer(state = defaultState, action) {
@@ -29,20 +14,6 @@ export default function MovieSearchReducer(state = defaultState, action) {
       return {
         ...state,
         searchItem: payload.searchItem
-      };
-    }
-
-    case "GET_MOVIE_FULFILLED": {
-      return {
-        ...state,
-        movieData: payload
-      };
-    }
-
-    case "GET_MOVIE_REJECTED": {
-      return {
-        ...state,
-        error: true
       };
     }
 

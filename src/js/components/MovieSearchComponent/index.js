@@ -4,7 +4,7 @@ import MovieSearchComponent from './MovieSearchComponent';
 function mapStoreToProps(store) {
     return {
       searchItem: store.search.searchItem,
-      movieData: store.search.movieData || {}
+      movies: store.search.movies || []
     };
   }
 
